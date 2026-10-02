@@ -3,7 +3,7 @@ Name:       harbour-felisplug
 Summary:    Unofficial EZVIZ smart plug controller
 Version:    0.1.0
 Release:    1
-License:    LICENSE
+License:    GPL-3.0-or-later
 BuildArch:  noarch
 URL:        https://github.com/MiPal666/harbour-felisplug
 Source0:    %{name}-%{version}.tar.bz2
