@@ -1,0 +1,10 @@
+RPMS/
+*.rpm
+*.before-v*
+__pycache__/
+*.pyc
+felisplug-v0*.sh
+Makefile
+documentation.list
+*.patch
+fix-felisplug-v*.sh
