@@ -118,6 +118,18 @@ Page {
         }
     }
 
+    // Shared entry point for both the Cover action and foreground activation.
+    function refreshPlugs() {
+        if (viewState !== "plugs" || busy)
+            return
+        backendCall("felisplug_backend.refresh", [])
+    }
+
+    Connections {
+        target: appWindowRef
+        onRefreshRequested: page.refreshPlugs()
+    }
+
     function backendCall(name, args) {
         busy = true
         python.call(name, args || [], function(result) {
@@ -279,7 +291,7 @@ Page {
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"), {
-                    "appVersion": appWindowRef ? appWindowRef.appVersion : "0.1.0"
+                    "appVersion": appWindowRef ? appWindowRef.appVersion : "0.2.0"
                 })
             }
             MenuItem {

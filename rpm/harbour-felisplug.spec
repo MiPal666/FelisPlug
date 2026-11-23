@@ -1,7 +1,6 @@
 Name:       harbour-felisplug
-
 Summary:    Unofficial EZVIZ smart plug controller
-Version:    0.1.0
+Version:    0.2.0
 Release:    1
 License:    GPL-3.0-or-later
 BuildArch:  noarch
@@ -34,9 +33,7 @@ Unofficial Sailfish OS client for controlling EZVIZ smart plugs.
 %qmake5_install
 
 
-desktop-file-install --delete-original       \
-  --dir %{buildroot}%{_datadir}/applications             \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original  --dir %{buildroot}%{_datadir}/applications  %{buildroot}%{_datadir}/applications/*.desktop
 
 %files
 %defattr(-,root,root,-)

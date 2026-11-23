@@ -6,6 +6,14 @@ CoverBackground {
 
     property var appWindowRef
 
+    CoverActionList {
+        enabled: !!appWindowRef
+        CoverAction {
+            iconSource: "image://theme/icon-cover-refresh"
+            onTriggered: appWindowRef.refreshRequested()
+        }
+    }
+
     readonly property int onCount: appWindowRef ? appWindowRef.coverOnCount : 0
     readonly property int offCount: appWindowRef ? appWindowRef.coverOffCount : 0
     readonly property int unavailableCount: appWindowRef ? appWindowRef.coverUnavailableCount : 0

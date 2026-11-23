@@ -4,7 +4,7 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    property string appVersion: "0.1.0"
+    property string appVersion: "0.2.0"
 
     allowedOrientations: Orientation.All
 
